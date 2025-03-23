@@ -27,8 +27,7 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
-      - name: test
-        run: ls
+
       - name: Build
         run: mvn -B verify
 
@@ -50,4 +49,4 @@ jobs:
           body: "Daily Build"
           draft: false
           prerelease: false
-          artifacts: CoreProtect-*.jar
+          artifacts: target/CoreProtect-*.jar

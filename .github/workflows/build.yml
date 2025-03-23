@@ -32,7 +32,7 @@ jobs:
         run: mvn -B verify
 
       - name: Upload CoreProtect Jar
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: CoreProtect Jar
           path: target/CoreProtect-*.jar
